@@ -41,13 +41,12 @@ static bool IsValidChoice(string userInput)
 //GetFull
  static void GetFull()
  {
-     Random rnd = new Random();
-     int number = rnd.Next(3, 10); //should generate random rows
+     Random rand = new Random();
+     int number = rand.Next(3, 10); //should generate random rows
      for(int e = 1; e <= number; e++) {
-        for(int g = 1; g <= e; g++){
+        for(int g = 1; g <= e; g++)
             System.Console.WriteLine("* ");
-        System.Console.WriteLine();
-        }
+            System.Console.WriteLine();
      }
      PauseAction();
 }
@@ -55,8 +54,8 @@ static bool IsValidChoice(string userInput)
 //GetPartial
  static void GetPartial()
  {
-     Random rnd = new Random();
-     int rows = rnd.Next(3, 10);
+     Random rand = new Random();
+     int rows = rand.Next(3, 10);
      for(int e = 1; e <= rows; e++) {
         for(int g = 1; g <= e; g++) {
             if(g == 1 || e == g || e == rows) {
@@ -68,7 +67,7 @@ static bool IsValidChoice(string userInput)
                     System.Console.WriteLine("* ");
                 }
             else {
-                System.Console.WriteLine(" ");
+                System.Console.WriteLine("  ");
             }
             }
         }
