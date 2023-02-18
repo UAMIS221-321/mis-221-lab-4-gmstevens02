@@ -1,5 +1,4 @@
 ﻿// start main
-using System;
 int userChoice = GetUserChoice(); //priming
 do 
 {
@@ -21,19 +20,17 @@ static int GetUserChoice()
 }
 
 //DisplayMenu
-static void DisplayMenu(int userChoice)
+static void DisplayMenu()
 {
-    while (userChoice != 3){
     Console.Clear();
     System.Console.WriteLine("Enter 1 to display full triangle\nEnter 2 to display partial triangle\nEnter 3 to exit");
 
-    }
 }
 
 //IsValidChoice
 static bool IsValidChoice(string userInput)
 {
-    if(userInput=="1" || userInput=="2" || userInput=="3" ){
+    if(userInput == "1" || userInput == "2" || userInput == "3" ){
         return true;
     }
     return false;
@@ -90,13 +87,13 @@ static bool IsValidChoice(string userInput)
 //RouteEm
 static void RouteEm(int menuChoice) 
 {
-    if(menuChoice==1){
+    if(menuChoice == 1){
         GetFull();
     }
-    else if(menuChoice==2){
+    else if(menuChoice == 2){
         GetPartial();
     }
-    else if(menuChoice!=3){
+    else if(menuChoice != 3){
         SayInvalid();
     }
 }
