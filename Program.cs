@@ -4,7 +4,7 @@ do
 {
     RouteEm(userChoice);
     userChoice = GetUserChoice();
-} while (userChoice !=3);
+} while (userChoice != 3);
 //end main
 
 //GetUserChoice
@@ -45,7 +45,7 @@ static bool IsValidChoice(string userInput)
      int number = rand.Next(3, 10); //should generate random rows
      for(int e = 1; e <= number; e++) {
         for(int g = 1; g <= e; g++)
-            System.Console.WriteLine("* ");
+            System.Console.Write("* ");
             System.Console.WriteLine();
      }
      PauseAction();
@@ -59,15 +59,15 @@ static bool IsValidChoice(string userInput)
      for(int e = 1; e <= rows; e++) {
         for(int g = 1; g <= e; g++) {
             if(g == 1 || e == g || e == rows) {
-                System.Console.WriteLine("* ");
+                System.Console.Write("* ");
             }
             else {
                 int number = new Random().Next(2);
                 if(number == 0) {
-                    System.Console.WriteLine("* ");
+                    System.Console.Write("* ");
                 }
             else {
-                System.Console.WriteLine("  ");
+                System.Console.Write(" ");
             }
             }
         }
@@ -86,13 +86,13 @@ static bool IsValidChoice(string userInput)
 //RouteEm
 static void RouteEm(int menuChoice) 
 {
-    if(menuChoice == 1){
+    if(menuChoice==1){
         GetFull();
     }
-    else if(menuChoice == 2){
+    else if(menuChoice==2){
         GetPartial();
     }
-    else if(menuChoice != 3){
+    else if(menuChoice!=3){
         SayInvalid();
     }
 }
